@@ -1,0 +1,54 @@
+//--------------------------------------------------------------------------------
+// VIEW STACK CONTENTS
+//--------------------------------------------------------------------------------
+
+// maze.h
+#ifdef DEBUG
+friend ostream& operator << (ostream& os, const CellPosition& pos);
+#endif
+
+// solvestack.cpp
+#ifdef DEBUG
+ostream& operator << (ostream& os, const CellPosition& pos)
+{
+	cout << pos.m_col << "," << pos.m_row;
+	return os;
+}
+#endif
+
+//--------------------------------------------------------------------------------
+// TEST MAZE 1 (MazeT1.txt)
+//--------------------------------------------------------------------------------
+
+TEST2
+5 29
+2 2
+2 4
+#############################
+#.#.........................#
+#.#########################.#
+#...........................#
+#############################
+
+
+//--------------------------------------------------------------------------------
+// VIEW MAZE CONTENTS
+//--------------------------------------------------------------------------------
+
+// maze.h
+friend ostream& operator << (ostream& os, const Maze& mz);
+
+// solvestack.cpp
+ostream& operator << (ostream& os, const Maze& mz)
+{
+	for (int i = 0; i < mz.rows; i++)
+    {
+		for (int j = 0; j < mz.cols; j++)
+		{
+			os << mz.maze[i][j].type;
+		}	
+		os << endl;
+    } 
+	os << endl;
+	return os;
+}*/

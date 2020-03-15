@@ -1,0 +1,25 @@
+
+//------------------------------------------------------------------------------
+// TO DO
+//------------------------------------------------------------------------------
+
+1: Add Visible Movement
+2: Add A Monster Roaming The Maze
+
+//------------------------------------------------------------------------------
+// BUGS
+//------------------------------------------------------------------------------
+
+BUG1:
+There's some anomoly occuring that positions the
+mouse in the wrong position in ASCII mazes. I'm 
+guessing it occurs at the solution stage, but I 
+haven't quite figured it out. This can be seen
+by loading and solving Maze 1. It occurs with
+bith Stack and Queue solutions. 
+
+BUG2:
+To display the mouse coords properly for the BIT based
+mazes you have to use +2 as the offset rather than +1. 
+This can be checked out in the PrintSolution() function 
+at line 399.
